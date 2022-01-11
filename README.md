@@ -113,8 +113,8 @@ cal-test        aws-cal-sa      arn:aws-cn:iam::xxxxxxxxxxxxx:role/eksctl-eksgo1
 ``` 
 
 ### 7. update deployment with serviceAccount, and create deployment/pod and ingress 
-serviceAccount: aws-cal-sa
-serviceAccountName: aws-cal-sa
+serviceAccount: aws-cal-sa   
+serviceAccountName: aws-cal-sa   
 
 ``` 
 #---
@@ -140,6 +140,7 @@ spec:
       labels:
         app: cal-test
     spec:
+      # add following serviceAccount info
       serviceAccount: aws-cal-sa
       serviceAccountName: aws-cal-sa
       containers:
